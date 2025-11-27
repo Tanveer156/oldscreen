@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TV Shows Reviews | OldScreen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:400,700&family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="big-header">
+    <div class="header-top-bar">
+      <div class="site-branding">
+        <div class="site-title">OldScreen</div>
+      </div>
+      
+      <div class="search-container">
+        <input type="text" class="search-box" id="searchInput" placeholder="Search movies, reviews...">
+        <button class="search-btn" onclick="performSearch()">
+          <span class="fa fa-search"></span>
+        </button>
+      </div>
+
+      <div class="auth-buttons">
+        <button class="btn-login" onclick="openLoginModal()">Login</button>
+        <button class="btn-signup" onclick="openSignupModal()">Sign Up</button>
+      </div>
+
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span class="fa fa-bars"></span>
+      </button>
+    </div>
+
+    <div class="header-content">
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="top-rated.html">Top Rated</a></li>
+          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More <span class="fa fa-caret-down"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="web-series.html">Web Series</a></li>
+              <li><a href="tv-shows.html">TV Shows</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="top-rated-page">
+    <section class="page-header">
+      <h1>Classic TV Shows Reviews</h1>
+      <p>Coming Soon! Stay tuned for our reviews of timeless television classics.</p>
+    </section>
+
+    <section class="coming-soon">
+      <div class="coming-soon-content">
+        <span class="fa fa-television" style="font-size: 4rem; color: var(--accent-burgundy);"></span>
+        <h2>TV Shows Section Under Construction</h2>
+        <p>We're curating reviews of the greatest classic TV shows from the golden age of television. From I Love Lucy to The Twilight Zone, our comprehensive guides are coming soon!</p>
+        <a href="index.html" class="btn-back">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-contact">
+        <span>Email: <a href="mailto:info@oldscreen.com">info@oldscreen.com</a></span>
+        <span>Phone: +123-456-7890</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Facebook" aria-label="Facebook"><span class="fa fa-facebook"></span></a>
+        <a href="#" title="X (formerly Twitter)" aria-label="X"><span class="x-icon">𝕏</span></a>
+        <a href="#" title="Instagram" aria-label="Instagram"><span class="fa fa-instagram"></span></a>
+      </div>
+    </div>
+    <div class="footer-text">
+      &copy; 2025 OldScreen. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>Login to OldScreen</h2>
+      <form class="auth-form">
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <label class="remember-me">
+          <input type="checkbox"> Remember me
+        </label>
+        <button type="submit" class="btn-submit">Login</button>
+        <p class="form-footer">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeSignupModal()">&times;</span>
+      <h2>Sign Up for OldScreen</h2>
+      <form class="auth-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit" class="btn-submit">Sign Up</button>
+        <p class="form-footer">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
